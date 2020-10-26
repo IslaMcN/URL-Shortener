@@ -4,3 +4,14 @@ function getRandom(){
     let random_str = Math.random().toString(5).substring(2,5) + Math.random().toString(10).substring(2,5);
     return random_str()
 }
+
+function geturl(){
+    let url = document.getElementById("urlinput").value;
+    let proto_ok = url.startsWith("http://") || url.startsWith("https://") || url.startsWith("ftp://");
+    if(!proto_ok){
+        let newURL = "http://" + url;
+        return newURL;
+    }else{
+        return url;
+    }
+}
