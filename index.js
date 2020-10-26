@@ -15,3 +15,9 @@ function geturl(){
         return url;
     }
 }
+
+function genHash(){
+    if(window.location.hash == ""){
+        window.location.hash = getrandom();
+    }
+}
